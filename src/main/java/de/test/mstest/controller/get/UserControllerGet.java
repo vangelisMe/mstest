@@ -11,4 +11,5 @@ public class UserControllerGet {
     public void getUser(@PathVariable Integer id) {
         System.out.println("ID: " + id);
     }
+
 }
