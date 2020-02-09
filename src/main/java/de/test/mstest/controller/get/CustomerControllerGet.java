@@ -49,7 +49,7 @@ public class CustomerControllerGet {
     public List<Customer> getAllCustomers() {
         String hello = "Customer Customers";
         List<Customer> customers = customerRepository.findAll();
-        if (customers.size() > 5) {
+        if (customers.size() < 5) {
             throw new ApiRequestException(ExError.TOO_BIG_NUMBER);
         }
         System.out.println("--- LENGTH: " + customers.size());
