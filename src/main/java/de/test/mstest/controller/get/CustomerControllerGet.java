@@ -45,7 +45,7 @@ public class CustomerControllerGet {
     }
 
 
-    @GetMapping("/api/customers")
+    @GetMapping("/customers")
     public List<Customer> getAllCustomers() {
         String hello = "Customer Customers";
         List<Customer> customers = customerRepository.findAll();
