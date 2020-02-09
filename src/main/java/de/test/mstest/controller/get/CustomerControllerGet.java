@@ -51,7 +51,7 @@ public class CustomerControllerGet {
         if (customers.size() <= 5) {
             throw new ApiRequestException(ExError.TOO_BIG_NUMBER);
         }
-        System.out.println("--- LENGTH: " + customers.size());
+        System.out.println("--- SIZE: " + customers.size());
         return customerRepository.findAll();
     }
 }
