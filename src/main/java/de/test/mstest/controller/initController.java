@@ -8,7 +8,7 @@ public class initController {
 
     @RequestMapping("/")
     public String initString() {
-        String hello = "Service funktioniert!";
+        String hello = "SERVICE FUNKTIONIERT!";
         return hello;
     }
 }

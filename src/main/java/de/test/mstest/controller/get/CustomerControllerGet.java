@@ -30,6 +30,7 @@ public class CustomerControllerGet {
         if (customer.getFirstname() == null) {
             throw new EntityNotFoundException("Cannot find Customer with ID: " + id);
         }
+        return customer;
 //        try {
 //            customer = customerRepository.getOne(id);
 //            if (customer.getFirstname() == null || customer.getId() == null) {
@@ -40,8 +41,6 @@ public class CustomerControllerGet {
 //        } catch (EntityNotFoundException e) {
 //            throw new ApiRequestException("Not Found " + e.getMessage());
 //        }
-
-        return customer;
     }
 
 
@@ -49,10 +48,10 @@ public class CustomerControllerGet {
     public List<Customer> getAllCustomers() {
         String hello = "Customer Customers";
         List<Customer> customers = customerRepository.findAll();
-        if (customers.size() > 5) {
+        if (customers.size() <= 5) {
             throw new ApiRequestException(ExError.TOO_BIG_NUMBER);
         }
-        System.out.println("--- LENGTH: " + customers.size());
+        System.out.println("--- SIZE: " + customers.size());
         return customerRepository.findAll();
     }
 }
